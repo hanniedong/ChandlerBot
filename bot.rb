@@ -58,16 +58,32 @@ def wait_for_user_input
         message.reply(text: IDIOMS[:men])
       when /\smorning\b/
         message.reply(text: IDIOMS[:morning])
+      when /\sfunny\b/
+        message.reply(text: IDIOMS[:funny])
       when /\smarry\b/
         message.reply(text: IDIOMS[:marry])
       when /\ssex\b/
         message.reply(text: IDIOMS[:sex])
+      when /\sRoss\b/
+        message.reply(text: IDIOMS[:Ross])
+      when /\sRachel\b/
+        message.reply(text: IDIOMS[:Rachel])
+      when /\sPhoebe\b/
+        message.reply(text: IDIOMS[:Phoebe])
+      when /\sMonica\b/
+        message.reply(text: IDIOMS[:Monica])
+      when /\sJoey\b/
+        message.reply(text: IDIOMS[:Joey])
       when /\sjoke\b/
         message.reply(text: IDIOMS[:joke])
       when /\sguess what\b/
         message.reply(text: IDIOMS[:guess_what])
       when /\sthank\b/
         message.reply(text: IDIOMS[:thank])
+      when /\sknow\b/
+        message.reply(text: IDIOMS[:know])
+      when /\shaha\b/
+        message.reply(text: IDIOMS[:haha])
       else
         message.reply(text: IDIOMS[:zing])
     end
@@ -79,21 +95,24 @@ IDIOMS = {
   greeting: "Hi. Name's Chandler. I make jokes when I'm uncomfortable. Want to hear one?",
   love: "Until the age of 25, I thought the only response to 'I love you' was 'oh crap'",
   speed: "It bodes well for me that speed impresses you.",
-  zing: "Can I interested you in a sarcastic comment?",
+  zing: "Can I interest you in a sarcastic comment?",
   morning: "I say more dumb things before 9 am than most people say all day.",
   feel: "We swallow our feelings. Even if it means we're unhappy forever. Sound good?",
   marry: "If you are not careful, you might not get married at all this year.",
+  funny: "Well, how you died was funny.",
   sex: "WHOOPAH",
   joke: "You're expecting a joke now?",
   guess_what: "The fifth dentist caved, and now they're all recommending Trident?.",
-  duck: "You know what's weird? Donald Duck never wore pants. But whenever he's getting otu of the shower he always puts a towel around his waist. I mean, what is that about?",
+  duck: "You know what's weird? Donald Duck never wore pants. But whenever he's getting out of the shower he always puts a towel around his waist. I mean, what is that about?",
   thanks: "Why of course.",
   how_are_you: "Pretty good. How are you?",
   men: "If I were a guy...Wait did I just say, if 'I were a guy'?",
-  how_are_you: "Pretty good. How are you?",
-  thanks: "Why of course.",
-  thanks: "Why of course.",
-  thanks: "Why of course.",
+  know: "What do you know.",
+  haha: "Haha I know I'm funny.",
+  Ross: "Oh, no. Two women love me. They're both gorgeous, my wallet's too small for my 50s, and my diamond shoes are too tight.",
+  Rachel: "Did you know Ross and Rachel were on a break?",
+  Phoebe: "Phoebe's got edge.",
+  Monica: "What did I marry into when I married Monica."
 }
 
 
