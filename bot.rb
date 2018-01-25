@@ -21,7 +21,7 @@ def wait_for_user_input
             }
           ]
         )
-      when 'yes'
+      when 'yes', 'sure', 'yeah', 'yup', 'yah'
         message.reply(text: 'Alright, pick a category.',
           quick_replies: [
             {
@@ -38,6 +38,11 @@ def wait_for_user_input
               content_type: 'text',
               title: 'duck',
               payload: 'duck'
+            },
+            {
+              content_type: 'text',
+              title: 'men',
+              payload: 'men'
             }
           ]
         )
@@ -49,6 +54,8 @@ def wait_for_user_input
         message.reply(text: IDIOMS[:speed])
       when 'duck'
         message.reply(text: IDIOMS[:duck])
+      when 'men'
+        message.reply(text: IDIOMS[:men])
       when /\smorning\b/
         message.reply(text: IDIOMS[:morning])
       when /\smarry\b/
@@ -81,7 +88,12 @@ IDIOMS = {
   guess_what: "The fifth dentist caved, and now they're all recommending Trident?.",
   duck: "You know what's weird? Donald Duck never wore pants. But whenever he's getting otu of the shower he always puts a towel around his waist. I mean, what is that about?",
   thanks: "Why of course.",
-  how_are_you: "Pretty good. How are you?"
+  how_are_you: "Pretty good. How are you?",
+  men: "If I were a guy...Wait did I just say, if 'I were a guy'?",
+  how_are_you: "Pretty good. How are you?",
+  thanks: "Why of course.",
+  thanks: "Why of course.",
+  thanks: "Why of course.",
 }
 
 
