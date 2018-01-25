@@ -21,7 +21,7 @@ def wait_for_user_input
             }
           ]
         )
-      when 'yes', 'sure', 'yeah', 'yup', 'yah'
+      when 'yes', 'sure', 'yeah', 'yup', 'yah', 'ok', 'okay'
         message.reply(text: 'Alright, pick a category.',
           quick_replies: [
             {
@@ -64,17 +64,17 @@ def wait_for_user_input
         message.reply(text: IDIOMS[:marry])
       when /\ssex\b/
         message.reply(text: IDIOMS[:sex])
-      when /\sRoss\b/, /\sross\b/
+      when /\sRoss\b/, /\sross\b/, 'Ross'
         message.reply(text: IDIOMS[:Ross])
-      when /\sRachel\b/, /\srachel\b/
+      when /\sRachel\b/, /\srachel\b/, 'Rachel'
         message.reply(text: IDIOMS[:Rachel])
-      when /\sPhoebe\b/, /\sphoebe\b/
+      when /\sPhoebe\b/, /\sphoebe\b/, 'Phoebe'
         message.reply(text: IDIOMS[:Phoebe])
-      when /\sMonica\b/, /\smonica\b/
+      when /\sMonica\b/, /\smonica\b/, 'Monica'
         message.reply(text: IDIOMS[:Monica])
-      when /\sJoey\b/, /\sjoey\b/
+      when /\sJoey\b/, /\sjoey\b/, 'Joey'
         message.reply(text: IDIOMS[:Joey])
-      when /\sChandler\b/, /\schandler\b/
+      when /\sChandler\b/, /\schandler\b/, 'Chandler'
         message.reply(text: IDIOMS[:Chandler])
       when /\sjoke\b/
         message.reply(text: IDIOMS[:joke])
@@ -84,8 +84,10 @@ def wait_for_user_input
         message.reply(text: IDIOMS[:thank])
       when /\sknow\b/
         message.reply(text: IDIOMS[:know])
-      when /\shaha\b/ , /\slmao\b/, /\slol\b/, /\sLOL\b/ 
+      when /\shaha\b/ , /\slmao\b/, /\slol\b/, /\sLOL\b/, 'haha', 'lmao', 'lol', 'LOL' 
         message.reply(text: IDIOMS[:haha])
+      when 'bye', /\sbye\b/, 'goodbye', /\sgoodbye\b/, 'later', /\slater\b/
+        message.reply(text: IDIOMS[:bye])
       else
         message.reply(text: IDIOMS[:zing].sample)
     end
@@ -97,7 +99,7 @@ IDIOMS = {
   greeting: "Hi. Name's Chandler. I make jokes when I'm uncomfortable. Want to hear one?",
   love: "Until the age of 25, I thought the only response to 'I love you' was 'oh crap'",
   speed: "It bodes well for me that speed impresses you.",
-  zing: ["Can I interest you in a sarcastic comment?", "Do you dig my jokes?", "I can keep going if you'd like.", "What's up?", "Come again?", "Like what you see?", "I’m full, and yet I know if I stop eating this, I’ll regret it.", "I swallow my feelings."],
+  zing: ["Can I interest you in a sarcastic comment?", "Do you dig my jokes?", "I can keep going if you'd like.", "Come again?", "Like what you see?", "I swallow my feelings.", "I have an urge to make a joke."],
   morning: "I say more dumb things before 9 am than most people say all day.",
   feel: "We swallow our feelings. Even if it means we're unhappy forever. Sound good?",
   marry: "If you are not careful, you might not get married at all this year.",
@@ -106,17 +108,18 @@ IDIOMS = {
   joke: "You're expecting a joke now?",
   guess_what: "The fifth dentist caved, and now they're all recommending Trident?.",
   duck: "You know what's weird? Donald Duck never wore pants. But whenever he's getting out of the shower he always puts a towel around his waist. I mean, what is that about?",
-  thanks: "Why of course.",
+  thank: "Why of course.",
   how_are_you: "Pretty good. How are you?",
   men: "If I were a guy...Wait did I just say, if 'I were a guy'?",
   know: "What do you know.",
   haha: "Haha I know I'm funny.",
-  Ross: "Oh, no. Two women love me. They're both gorgeous, my wallet's too small for my 50s, and my diamond shoes are too tight.",
+  Ross: "He's always like, 'Two women love me. They're both gorgeous, my wallet's too small for my 50s, and my diamond shoes are too tight.'",
   Rachel: "Did you know Ross and Rachel were on a break?",
   Phoebe: "Phoebe's got edge.",
   Joey: "Joey. I miss that guy.",
   Chandler: "Chandler's my name. Don't wear it out.",
-  Monica: "What did I marry into when I married Monica."
+  Monica: "What did I marry into when I married Monica.",
+  bye: "Later gator."
 }
 
 
